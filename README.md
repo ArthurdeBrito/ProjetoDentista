@@ -1,15 +1,22 @@
 ```markdown
 # 🦷 Sorriso Perfeito — Landing Page PWA
 
-Landing page **moderna, responsiva e instalável como aplicativo (PWA)** desenvolvida para o consultório odontológico fictício **Sorriso Perfeito**.
+Landing page **responsiva**, **interativa** e **instalável como aplicativo (PWA)** desenvolvida para um consultório odontológico fictício.
 
-Projeto acadêmico com foco em **UX/UI**, **performance**, **boas práticas web** e **recursos avançados do navegador**.
+O projeto foi criado com foco em **experiência do usuário (UX)**, **interface moderna (UI)** e uso de **recursos avançados do navegador**, utilizando apenas tecnologias web nativas.
 
 ---
 
-## 🚀 Demonstração
+## 🚀 Visão Geral
 
-> (Adicione aqui o link do deploy — ex: Vercel, Netlify ou GitHub Pages)
+A aplicação simula o site institucional de um consultório, com funcionalidades dinâmicas como:
+
+- Preenchimento automático de endereço
+- Clima em tempo real
+- Tema escuro/claro
+- Animações modernas
+- Instalação como app (PWA)
+- Funcionalidade offline
 
 ---
 
@@ -18,15 +25,15 @@ Projeto acadêmico com foco em **UX/UI**, **performance**, **boas práticas web*
 ```
 
 projetoSorrisoPerfeito/
-├── index.html
-├── manifest.json
-├── sw.js
+├── index.html              # Estrutura principal
+├── manifest.json           # Configuração do PWA
+├── sw.js                   # Service Worker (cache e offline)
 ├── styles/
-│   └── style.css
+│   └── style.css           # Estilos da aplicação
 ├── scripts/
-│   └── script.js
+│   └── script.js           # Funcionalidades em JavaScript
 └── assets/
-└── icons/
+└── icons/              # Ícones do aplicativo
 
 ````
 
@@ -34,110 +41,112 @@ projetoSorrisoPerfeito/
 
 ## ✨ Funcionalidades
 
-### 🌐 Integrações com API
-- ViaCEP → preenchimento automático de endereço
-- OpenWeatherMap → clima em tempo real
-
-### 🌙 Tema Dark / Light
-- Alternância manual
-- Persistência com `localStorage`
-- Detecção automática do sistema
-
-### 🎬 Animações
-- Entrada dinâmica de elementos (direções variadas)
-- Hover com efeito **shimmer**
-- Ícones com efeito **pulse**
-- Microinterações modernas em toda a UI
-
-### 📊 Estatísticas Animadas
-- Contadores com `easeOutExpo`
-- Barra de progresso sincronizada
-- Ativação via `IntersectionObserver`
-
-### 🧠 Formulário Inteligente
-- Máscara automática de telefone
-- Auto preenchimento de CEP
-- Validação em tempo real
-- Feedback visual de envio
-
-### 📱 Navegação
-- Menu hambúrguer animado
-- Smooth scroll com offset
-- Botão "voltar ao topo"
-- Botão WhatsApp flutuante
-
-### 📦 PWA (Progressive Web App)
-- Instalável (mobile e desktop)
-- Funciona offline
-- Service Worker com cache inteligente:
-  - Cache First (assets)
-  - Network First (APIs)
-- Banner de instalação personalizado
+### 🔌 Integração com APIs
+- **ViaCEP**
+  - Preenchimento automático de endereço ao digitar o CEP
+- **OpenWeatherMap**
+  - Exibição do clima atual com ícone dinâmico
 
 ---
 
-## 🎨 Design System
+### 🌙 Tema Dark / Light
+- Alternância manual via botão
+- Persistência com `localStorage`
+- Detecção automática da preferência do sistema
 
-### Paleta de cores
+---
 
-| Cor | Hex |
-|-----|-----|
-| Azul claro | `#A9D6E5` |
-| Azul escuro | `#3a86a8` |
-| Verde suave | `#90BE6D` |
-| Branco | `#FFFFFF` |
-| Cinza claro | `#F3F4F6` |
-| Azul noite | `#0d1b26` |
+### 🎬 Animações e Interações
+- Entrada de elementos com animações direcionais
+- Efeito **shimmer** em cards
+- Ícones com animação **pulse**
+- Linha animada ao passar o mouse nos serviços
+- Microinterações suaves em toda a interface
+
+---
+
+### 📊 Estatísticas Animadas
+- Contadores com animação de `0 → valor final`
+- Efeito de easing (`easeOutExpo`)
+- Barra de progresso sincronizada
+- Ativação ao entrar na viewport (`IntersectionObserver`)
+
+---
+
+### 🧠 Formulário Inteligente
+- Máscara automática para telefone
+- Busca de CEP com feedback:
+  - carregando
+  - sucesso
+  - erro
+- Validação em tempo real
+- Feedback visual de envio
+
+---
+
+### 🧭 Navegação
+- Menu hambúrguer animado (mobile)
+- Scroll suave com compensação do header fixo
+- Botão "voltar ao topo" com indicador de progresso
+- Botão flutuante do WhatsApp com animação
+
+---
+
+### 📱 Progressive Web App (PWA)
+- Instalável em dispositivos móveis e desktop
+- Funciona offline com fallback personalizado
+- Estratégias de cache:
+  - **Cache First** para arquivos estáticos
+  - **Network First** para APIs
+- Banner de instalação customizado
+- Atalhos rápidos (shortcuts)
+- Tema adaptável ao modo claro/escuro
+
+---
+
+## 🎨 Design
+
+### Paleta de Cores
+
+| Cor          | Código Hex |
+|--------------|------------|
+| Azul claro   | `#A9D6E5`  |
+| Azul escuro  | `#3a86a8`  |
+| Verde suave  | `#90BE6D`  |
+| Branco       | `#FFFFFF`  |
+| Cinza claro  | `#F3F4F6`  |
+| Azul noite   | `#0d1b26`  |
 
 ---
 
 ## 📱 Responsividade
 
-| Dispositivo | Layout |
+| Breakpoint | Layout |
 |------------|--------|
-| Desktop | 3 colunas |
-| Tablet | 2 colunas |
-| Mobile | 1 coluna |
-
----
-
-## 🛠️ Tecnologias Utilizadas
-
-- HTML5 semântico
-- CSS3 (Flexbox, Grid, Animations, Variables)
-- JavaScript ES6+ (Vanilla)
-- Service Workers (PWA)
-- Fetch API
-- IntersectionObserver
+| ≥ 1025px   | Desktop (3 colunas) |
+| 769–1024px | Tablet (2 colunas) |
+| ≤ 768px    | Mobile (1 coluna) |
+| ≤ 480px    | Small devices |
 
 ---
 
 ## ⚙️ Como Executar
 
-### 1. Clone o repositório
-```bash
-git clone https://github.com/seu-usuario/seu-repo.git
-````
+### ▶️ Opção 1 — VS Code (Recomendado)
+Utilize a extensão **Live Server** e clique em **"Go Live"**
 
-### 2. Acesse a pasta
+---
 
-```bash
-cd projetoSorrisoPerfeito
-```
-
-### 3. Execute localmente
-
-#### Opção A — VS Code
-
-Use a extensão **Live Server**
-
-#### Opção B — Python
-
+### 🐍 Opção 2 — Python
 ```bash
 python -m http.server 8000
-```
+````
 
-#### Opção C — Node
+Acesse: `http://localhost:8000`
+
+---
+
+### 🟢 Opção 3 — Node.js
 
 ```bash
 npx serve .
@@ -145,17 +154,17 @@ npx serve .
 
 ---
 
-## 🔑 Configuração da API (Clima)
+## 🔑 Configuração da API de Clima
 
-1. Crie uma conta em [https://openweathermap.org](https://openweathermap.org)
+1. Crie uma conta em: [https://openweathermap.org](https://openweathermap.org)
 2. Gere sua API Key
-3. No arquivo `script.js`, substitua:
+3. No arquivo `scripts/script.js`, substitua:
 
 ```js
 const OPENWEATHER_KEY = 'SUA_CHAVE_AQUI';
 ```
 
-> A ativação pode levar alguns minutos.
+> A ativação da chave pode levar algum tempo.
 
 ---
 
@@ -163,47 +172,59 @@ const OPENWEATHER_KEY = 'SUA_CHAVE_AQUI';
 
 Para funcionamento completo:
 
-* Deve rodar em **HTTPS ou localhost**
+* Necessário **HTTPS ou localhost**
 * Inclui:
 
   * `manifest.json`
-  * `service worker (sw.js)`
+  * `service worker`
   * ícones personalizados
 
 ---
 
-## 🔮 Roadmap
+## 🔮 Próximas Melhorias
 
-* [ ] Integração com backend (PHP)
-* [ ] Sistema de agendamento
-* [ ] Banco de dados (MySQL)
-* [ ] Painel administrativo
-* [ ] Autenticação de usuários
+* Integração com backend (PHP)
+* Envio real de formulário (e-mail)
+* Sistema de agendamento
+* Banco de dados (MySQL)
+* Painel administrativo
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* HTML5 semântico
+* CSS3 (Flexbox, Grid, Variáveis, Animações)
+* JavaScript ES6+ (Vanilla)
+* Fetch API
+* IntersectionObserver
+* Service Worker (PWA)
 
 ---
 
 ## ✅ Checklist
 
-* [x] Layout responsivo
-* [x] Dark/Light mode
-* [x] Animações avançadas
+* [x] Estrutura HTML semântica
+* [x] Estilização moderna com CSS
+* [x] Tema Dark/Light
+* [x] Animações e microinterações
 * [x] Integração com APIs
 * [x] Formulário inteligente
+* [x] Responsividade completa
 * [x] PWA funcional
-* [x] Offline support
-* [x] UX otimizada
+* [x] Suporte offline
 
 ---
 
 ## 📌 Observação
 
-Este projeto é **fictício e acadêmico**, criado apenas para fins de estudo e demonstração.
+Este projeto é **fictício** e foi desenvolvido para fins **educacionais**, com o objetivo de praticar conceitos modernos de desenvolvimento web.
 
 ---
 
-## 💙 Autor
+## 💙 Sorriso Perfeito
 
-Desenvolvido por Arthur de Brito da silva
+Transformando sorrisos com tecnologia e inovação.
 
 ```
 ```
